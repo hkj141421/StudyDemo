@@ -1,0 +1,40 @@
+<component name="ArtifactManager">
+  <artifact name="WebServiceDemo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WebServiceDemo_jar</output-path>
+    <root id="root">
+      <element id="archive" name="WebServiceDemo.jar">
+        <element id="module-output" name="WebServiceDemo" />
+      </element>
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-frontend-simple:3.0.0" />
+      <element id="library" level="project" name="Maven: org.codehaus.woodstox:stax2-api:3.1.4" />
+      <element id="library" level="project" name="Maven: org.apache.ws.xmlschema:xmlschema-core:2.1.0" />
+      <element id="library" level="project" name="Maven: org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0" />
+      <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+      <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-http:9.4.18.v20190429" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-transports-http:3.0.0" />
+      <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.26" />
+      <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.7" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-transports-http-jetty:3.0.0" />
+      <element id="library" level="project" name="Maven: org.apache.neethi:neethi:3.0.3" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-wsdl:3.0.0" />
+      <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-security:9.4.18.v20190429" />
+      <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-server:9.4.18.v20190429" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-bindings-soap:3.0.0" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-ws-addr:3.0.0" />
+      <element id="library" level="project" name="Maven: wsdl4j:wsdl4j:1.6.3" />
+      <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.12" />
+      <element id="library" level="project" name="Maven: asm:asm:3.3.1" />
+      <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-io:9.4.18.v20190429" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-ws-policy:3.0.0" />
+      <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-util:9.4.18.v20190429" />
+      <element id="library" level="project" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.3.0" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-databinding-jaxb:3.0.0" />
+      <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:2.16" />
+      <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-core:2.2.7" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-bindings-xml:3.0.0" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-frontend-jaxws:3.0.0" />
+      <element id="library" level="project" name="Maven: xml-resolver:xml-resolver:1.2" />
+      <element id="library" level="project" name="Maven: org.apache.cxf:cxf-core:3.0.0" />
+    </root>
+  </artifact>
+</component>

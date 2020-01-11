@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="FrameWork.DAO.UserMapper">
+
+    <select id="selectUser" resultType="userbase" parameterType="Page">
+        select * from userbase  where name=#{params.name}
+    </select>
+
+    <insert id="insertTest" parameterType="TESTDATE">
+        INSERT INTO `mybatistest`.`testdate`(`DATE13`,`DATE12`,`DATE11`,`DATE10`,`DATE9`, `DATE8`, `DATE7`, `DATE6`, `DATE5`, `DATE4`, `DATE3`, `DATE2`, `DATE1`) VALUES (#DATE13,#DATE12,#DATE11,#DATE9,#DATE9, #DATE8, #DATE7,#DATE6,#DATE5, #DATE4, #DATE3, #DATE2,#DATE1)
+    </insert>
+
+</mapper>

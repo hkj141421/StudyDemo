@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="Autotest" targetRuntime="MyBatis3">
+
+        <jdbcConnection
+                driverClass="com.mysql.cj.jdbc.Driver"
+                connectionURL="jdbc:mysql://localhost:3306/mybatistest?characterEncoding=utf8&amp;useSSL=true&amp;serverTimezone=UTC"
+                userId="root"
+                password="root">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.study.bean" targetProject="E:\Code\FrameDemo\SpringBootDemo\src\main\java">
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.study.Mapper" targetProject="E:\Code\FrameDemo\SpringBootDemo\src\main\java">
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.study.Dao" targetProject="E:\Code\FrameDemo\SpringBootDemo\src\main\java">
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+
+        <table tableName="userbase" domainObjectName="User"></table>
+
+    </context>
+
+</generatorConfiguration>

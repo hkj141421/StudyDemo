@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MongoDemo/MongoDemo.iml" filepath="$PROJECT_DIR$/MongoDemo/MongoDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MybatisDemo/MybatisDemo.iml" filepath="$PROJECT_DIR$/MybatisDemo/MybatisDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NioDemo/NioDemo.iml" filepath="$PROJECT_DIR$/NioDemo/NioDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSMDemo/SSMDemo.iml" filepath="$PROJECT_DIR$/SSMDemo/SSMDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Security/Security.iml" filepath="$PROJECT_DIR$/Security/Security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SecurityDemo/SecurityDemo.iml" filepath="$PROJECT_DIR$/SecurityDemo/SecurityDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootDemo/SpringBootDemo.iml" filepath="$PROJECT_DIR$/SpringBootDemo/SpringBootDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringDemo/SpringDemo.iml" filepath="$PROJECT_DIR$/SpringDemo/SpringDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVCDemo/SpringMVCDemo.iml" filepath="$PROJECT_DIR$/SpringMVCDemo/SpringMVCDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UdpDemo/UdpDemo.iml" filepath="$PROJECT_DIR$/UdpDemo/UdpDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebServiceDemo/WebServiceDemo.iml" filepath="$PROJECT_DIR$/WebServiceDemo/WebServiceDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebTest.iml" filepath="$PROJECT_DIR$/WebTest.iml" />
+      <module fileurl="file://E:\Code\FrameDemo\MybatisDemo\web.iml" filepath="E:\Code\FrameDemo\MybatisDemo\web.iml" />
+    </modules>
+  </component>
+</project>

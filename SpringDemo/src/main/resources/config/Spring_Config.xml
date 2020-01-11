@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--<context:component-scan base-package="FrameWork.ServiceImpl,FrameWork.bean,FrameWork.Servlets"></context:component-scan>-->
+
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+    <bean id="User" class="FrameWork.bean.User"></bean>
+
+    <bean id="Music" class="FrameWork.bean.Music"></bean>
+
+    <bean id="UserService" class="FrameWork.ServiceImpl.UserServiceImpl">
+    </bean>
+
+    <bean id="MusicService" class="FrameWork.ServiceImpl.MusicServiceImpl">
+    </bean>
+
+    <bean id="eithAdvice" class="FrameWork.Advice.eithAdvice"></bean>
+
+    <bean id="myAdvice" class="FrameWork.Advice.myAdvice"></bean>
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatistest?characterEncoding=utf8&amp;useSSL=true&amp;serverTimezone=UTC"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+            <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <!--配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <!--启用事务管理器-->
+    <!--<tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>-->
+
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy><!--开启自动代理-->
+
+
+    <tx:advice transaction-manager="transactionManager" id="txAdvice">
+        <tx:attributes>
+            <!-- 支持当前事务，如果执行到get开头的任何方法时没有事务则开启一个事务 这是最常见的方式 -->
+            <tx:method name="get*" rollback-for="java.lang.Exception" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* FrameWork.ServiceImpl.UserServiceImpl.*(..))"></aop:advisor>
+    </aop:config>
+
+    <aop:config>
+        <!--配置切面，需要切入的功能为myAdvice中的方法-->
+        <aop:aspect ref="eithAdvice">
+            <aop:pointcut id="mypointcut" expression="execution(* FrameWork.ServiceImpl.MusicServiceImpl.*())"></aop:pointcut>
+            <aop:before method="doBefore" pointcut-ref="mypointcut"></aop:before>
+            <aop:after method="doAfter" pointcut="execution(* FrameWork.ServiceImpl.MusicServiceImpl.*())"></aop:after>
+            <!--<aop:around method="doAround" pointcut-ref="mypointcut"></aop:around>-->
+            <aop:after-throwing method="doException" throwing="e" pointcut="execution(* FrameWork.ServiceImpl.MusicServiceImpl.*())"></aop:after-throwing>
+        </aop:aspect>
+    </aop:config>
+
+
+</beans>
+
+

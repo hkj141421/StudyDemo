@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="MongoDemo" />
+        <module name="MybatisDemo" />
+        <module name="NioDemo" />
+        <module name="Security" />
+        <module name="SecurityDemo" />
+        <module name="SpringBootDemo" />
+        <module name="SpringDemo" />
+        <module name="SpringMVCDemo" />
+        <module name="SSMDemo" />
+        <module name="UdpDemo" />
+        <module name="WebServiceDemo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="MongoDemo" target="1.8" />
+      <module name="MybatisDemo" target="1.8" />
+      <module name="NioDemo" target="1.7" />
+      <module name="Security" target="1.5" />
+      <module name="SecurityDemo" target="1.7" />
+      <module name="SpringBootDemo" target="1.7" />
+      <module name="SpringDemo" target="1.8" />
+      <module name="SpringMVCDemo" target="1.8" />
+      <module name="SSMDemo" target="1.8" />
+      <module name="UdpDemo" target="1.8" />
+      <module name="WebServiceDemo" target="1.8" />
+      <module name="WebTest" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

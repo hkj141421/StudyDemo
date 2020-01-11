@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties>
+        <property name="url" value="jdbc:mysql://localhost:3306/mybatistest?characterEncoding=utf8&amp;useSSL=true&amp;serverTimezone=UTC"></property>
+        <property name="driver" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+    </properties>
+
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+
+    <typeAliases>
+        <!--<typeAlias type="FrameWork.bean.userbase" alias="userbase"></typeAlias>-->
+        <package name="FrameWork.bean"></package>
+    </typeAliases>
+
+    <plugins>
+        <plugin interceptor="FrameWork.util.SqlInvocation">
+            <property name="name" value="knight"></property>
+        </plugin>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="FrameWork/DAO/UserMapper.xml"></mapper>
+    </mappers>
+
+</configuration>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Class-Path: cxf-rt-frontend-simple-3.0.0.jar stax2-api-3.1.4.jar xmlsc
+ hema-core-2.1.0.jar geronimo-servlet_3.0_spec-1.0.jar javax.servlet-a
+ pi-4.0.1.jar jetty-http-9.4.18.v20190429.jar cxf-rt-transports-http-3
+ .0.0.jar slf4j-api-1.7.26.jar jaxb-impl-2.2.7.jar cxf-rt-transports-h
+ ttp-jetty-3.0.0.jar neethi-3.0.3.jar cxf-rt-wsdl-3.0.0.jar jetty-secu
+ rity-9.4.18.v20190429.jar jetty-server-9.4.18.v20190429.jar cxf-rt-bi
+ ndings-soap-3.0.0.jar cxf-rt-ws-addr-3.0.0.jar wsdl4j-1.6.3.jar FastI
+ nfoset-1.2.12.jar asm-3.3.1.jar jetty-io-9.4.18.v20190429.jar cxf-rt-
+ ws-policy-3.0.0.jar jetty-util-9.4.18.v20190429.jar woodstox-core-asl
+ -4.3.0.jar cxf-rt-databinding-jaxb-3.0.0.jar istack-commons-runtime-2
+ .16.jar jaxb-core-2.2.7.jar cxf-rt-bindings-xml-3.0.0.jar cxf-rt-fron
+ tend-jaxws-3.0.0.jar xml-resolver-1.2.jar cxf-core-3.0.0.jar
+Main-Class: FrameWork.App
+

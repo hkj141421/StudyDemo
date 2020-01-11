@@ -1,0 +1,58 @@
+spring:
+  profiles:
+    active: bate
+---
+spring:
+  messages:
+    basename: config
+  profiles: dev
+
+server:
+  port: 80
+---
+spring:
+  messages:
+    basename: config
+  profiles: product
+server:
+   port: 1122
+
+---
+spring:
+  messages:
+    basename: config
+  profiles: bate
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      enabled: true
+      location: /
+      max-request-size: 100MB
+  datasource:
+#    druid:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      password: root
+#      username: root
+#      url: jdbc:mysql://localhost:3306/mybatistest?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+#      min-idle: 5
+#      initial-size: 5
+
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/mybatistest?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat,wall
+
+server:
+  port: 1100
+mybatis:
+  type-aliases-package: com.study.bean
+  mapper-locations: classpath:com/study/Mapper/*.xml
+#debug: true
+
+
+
+
